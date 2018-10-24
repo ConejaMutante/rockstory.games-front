@@ -9,3 +9,8 @@ jobs:
       - docker build -t sirmmo/rockstory_games-front .
       - docker push sirmmo/rockstory_games-front
  
+notifications:
+  slack:
+    rooms:
+      - ingmmo:SW0ahzRuwFIJKKAlQPzGRg0f#prj-coneja
+      - ingmmo:SW0ahzRuwFIJKKAlQPzGRg0f#travisbuilds
