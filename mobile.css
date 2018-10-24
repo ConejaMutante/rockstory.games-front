@@ -1,0 +1,77 @@
+
+@font-face {
+    font-family: "Kimberley";
+    src: url("assets/kimberley_bl.ttf");
+}
+
+
+body{
+    /*background:     black;*/
+    color:          white;
+    background: linear-gradient(#65101b, #ad263a);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family:    Kimberley, sans-serif;
+
+        line-height:    48px;
+    font-weight:    bold;
+    font-style:   italic;
+    font-size:      20pt;
+
+}
+
+a:link, a:hover, a:visited
+{
+    color:          white;
+}
+
+#slidesequence
+{
+    margin-top:     32px;
+}
+
+.slide
+{
+    margin-top:     128px;
+    text-align: center;
+}
+
+.slide img.halfsize
+{
+    width:      80%;
+    /*image-rendering: crisp-edges;*/
+    image-rendering: -webkit-crisp-edges;
+    /*image-rendering: -webkit-optimize-contrast;*/
+
+}
+
+
+img.creditslogo
+{
+    max-height:     48px;
+    vertical-align: middle;
+}
+
+.linestrong
+{
+    font-size:      32pt;
+}
+
+.gameimg.boxart
+{
+    border:         2px solid black;
+    border-radius: 8px;
+}
+
+.creditsend
+{
+    font-size:      32px;
+}
+
+
+img.creditslogolarge
+{
+    width:  80%;
+}
