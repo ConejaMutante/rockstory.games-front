@@ -1,0 +1,204 @@
+body {
+    font-family: sans-serif;
+    background: black;
+    color: white;
+
+
+
+}
+
+@font-face {
+    font-family: "Kimberley";
+    src: url("assets/kimberley_bl.ttf");
+}
+
+
+a:link,
+a:hover,
+a:visited {
+    color: white;
+}
+
+
+
+div#structhold {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(#65101b, #ad263a);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+div#gamedisplay {
+    position: absolute;
+    width: 50%;
+    top: 32px;
+    right: 0;
+    padding-right: 32px;
+    bottom: 96px;
+}
+
+div#logomain {
+    position: absolute;
+    width: 40%;
+    top: 32px;
+    padding-left: 32px;
+    left: 0;
+    bottom: 96px;
+}
+
+div#logohold {
+    position: absolute;
+    height: 80%;
+    top: 10%;
+    bottom: 10%;
+    left: 32px;
+    right: 0;
+    text-align: center;
+    line-height: 100%;
+    vertical-align: baseline;
+}
+
+img#rslogo {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+
+}
+
+div#creditsbar {
+    position: absolute;
+    height: 64px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    font-family: Kimberley, sans-serif;
+
+
+}
+
+div#slideholder {
+    position: absolute;
+    height: 80%;
+    top: 10%;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    overflow-x: hidden;
+}
+
+div.gameslide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Kimberley, sans-serif;
+    text-align: center;
+}
+
+span.tagline {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+div.gameslide img.halfsize {
+    height: 40%;
+    /*image-rendering: crisp-edges;*/
+    image-rendering: -webkit-crisp-edges;
+    /*image-rendering: -webkit-optimize-contrast;*/
+
+}
+
+div.gameslide img.fullsize {
+    height: 80%;
+    /*image-rendering: crisp-edges;*/
+    image-rendering: -webkit-crisp-edges;
+    /*image-rendering: -webkit-optimize-contrast;*/
+
+}
+
+
+div.slidecontrols {
+    position: absolute;
+    bottom: 32px;
+    left: 20%;
+    right: 20%;
+    text-align: center;
+}
+
+
+/*
+
+div.gameslide:not(.active)
+{
+    display:    none;
+}
+
+*/
+
+div.gameslide {
+    display: none;
+}
+
+
+#creditsline {
+    line-height: 48px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16pt;
+}
+
+#creditsline img {
+    max-height: 48px;
+    vertical-align: middle;
+}
+
+a.btn {
+    font-weight: bold;
+    font-family: Kimberley, sans-serif;
+
+}
+
+.conejaname {}
+
+.disclaimer {
+    font-size: 6pt;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 32px;
+}
+
+.gameslide_col {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    width: 45%;
+
+}
+
+.col_dx {
+    right: 0;
+}
+
+.col_sx {
+    left: 0;
+}
+
+.gameslide_col .linestrong {
+    font-size: 16pt;
+}
+
+.gameimg.boxart {
+    border: 2px solid black;
+    border-radius: 8px;
+}

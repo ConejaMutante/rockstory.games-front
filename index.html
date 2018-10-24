@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RÖCK STORŸ</title>
+
+    <link rel="stylesheet" href="material/conejalize.css">
+    <script type="text/javascript" src="material/materialize.js"></script>
+
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <link rel="favicon" href="assets/coneja_favicon.png">
+
+    <script type="text/javascript" src="material/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+
+    <div id="structhold">
+        <div id="logomain">
+            <div id="logohold">
+                <img src="assets/rslogobig.png" id="rslogo">
+                <div class="disclaimer">
+                    * le grafiche sono delle designer impression e non rappresentano il gioco finale
+                </div>
+            </div>
+        </div>
+
+        <div id="gamedisplay">
+            <div id="slideholder">
+                <div class="gameslide" data-slideid="gamebox">
+                    <div class="gameslide_col col_sx">
+                        <img class="gameimg fullsize boxart" src="cards/box_vhs_cover.jpg"><br>
+                    </div>
+                    <div class="gameslide_col col_dx">
+                        <span class="tagline linestrong">it's a<br>long<br><i>GAME</i><br>to the top<br>if you wanna<br>ROCK'N'ROLL</span>
+                    </div>
+                </div>
+
+                <div class="gameslide" data-slideid="artists">
+                    <img class="gameimg fullsize" src="cards/screens_artist.png"><br>
+                    <span class="tagline">40 artisti in cerca di fama</span>
+                </div>
+
+                <div class="gameslide" data-slideid="howtoplay">
+                    <img class="gameimg halfsize" src="cards/screen_activities.png"><br>
+                    <span class="tagline">22 modi di guidarli al successo</span><br>
+                    <img class="gameimg halfsize" src="cards/screen_success.png">
+                </div>
+
+                <div class="gameslide" data-slideid="eventcards">
+                    <img class="gameimg fullsize" src="cards/screen_stuff.png"><br>
+                    <span class="tagline">28 strategie, sabotaggi e imprevisti</span><br>
+                </div>
+
+                <div class="gameslide" data-slideid="3">
+                    <span class="tagline">slide n. 4</span><br>
+                </div>
+            </div>
+
+            <div class="slidecontrols">
+                <a id="btn_slide_bck" class="btn changeslide" data-changeto="-1"> INDIETRO </a>
+                &nbsp; &nbsp; &nbsp;
+                <a id="btn_slide_fwd" class="btn changeslide" data-changeto="+1"> AVANTI </a>
+            </div>
+        </div>
+
+        <div id="creditsbar">
+            <span id="creditsline">
+                <img class="creditslogo" src="assets/coneja_reverse_trans.png">
+                un gioco <span class="conejaname">CONEJA MUTANTE</span>: team.coneja@gmail.com<br>
+            </span>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+    $(function () {
+
+
+        var SLIDELIST = ["artists", "howtoplay", "eventcards", "gamebox"];
+
+        function switchSlide(slidenum) {
+
+            checkSwitchers(slidenum);
+
+            var slideid = SLIDELIST[slidenum];
+
+            var next = $(".gameslide[data-slideid=\"" + slideid + "\"]");
+
+            $(".gameslide").removeClass("active");
+            next.addClass("active");
+
+            $(".gameslide:not(.active)").fadeOut();
+            $(".gameslide.active").fadeIn();
+
+
+
+        }
+
+        function checkSwitchers(slidenum) {
+
+            var hasfwd = slidenum < (SLIDELIST.length - 1);
+            var hasbck = slidenum > 0;
+
+            $("#btn_slide_fwd").css("visibility", hasfwd ? "visible" : "hidden");
+            $("#btn_slide_bck").css("visibility", hasbck ? "visible" : "hidden");
+
+        }
+
+
+        $(".btn.changeslide").bind("click", function () {
+            var current = $(".gameslide.active");
+            var currentid = SLIDELIST.indexOf(current.attr("data-slideid"));
+            var direction = parseInt($(this).attr("data-changeto"));
+
+            var nextid = currentid + direction;
+
+            switchSlide(nextid);
+
+        });
+
+        switchSlide(0);
+
+    });
+</script>
+
+</html>
