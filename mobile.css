@@ -75,3 +75,9 @@ img.creditslogolarge
 {
     width:  80%;
 }
+
+#embedtv
+{
+     border:         2px solid white;
+    border-radius: 8px;
+}
