@@ -82,3 +82,9 @@ img.creditslogolarge
     border-radius: 8px;
     background-color:     #000000;
 }
+
+.disclaimer
+{
+    font-size:      smaller;
+    font-style:     italic;
+}
